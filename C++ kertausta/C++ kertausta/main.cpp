@@ -56,5 +56,5 @@ opiskelijan tulostaTiedot() -metodia? Miten virtual -sanan käyttö kantaluokassa 
 vaikuttaa tilanteeseen ja miksi?
 
 Kutsutaan henkilön tulostatiedot() metodia. Virtual sanan käyttö luo funktion, mutta sitä ei voida kutsua eli kutsutaan
-opiskelijan funktiota.
+opiskelijan funktiota.//
 */
