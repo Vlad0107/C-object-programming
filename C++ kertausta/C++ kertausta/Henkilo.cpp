@@ -14,9 +14,11 @@ Henkilo::Henkilo(const string& aNimi, int aIka) : ika(aIka), nimi(aNimi)
 	cout << "henkilon 2 parametrinen rakentaja" << endl;
 }
 
-Henkilo::Henkilo( const string& aNimi, int aIka, string aKatu, string aKunta): ika(aIka),nimi(aNimi), osoite(aKatu,aKunta)
+Henkilo::Henkilo( const string& aNimi, int aIka, string aKatu, string aKunta): ika(aIka),nimi(aNimi)
 {
 	cout << "henkilon 2 parametrinen rakentaja" << endl;
+	osoite->setKatuOsoite(aKatu);
+	osoite->setKunta(aKunta);
 }
 
 Henkilo::Henkilo(const Henkilo & aHlo) : ika(aHlo.ika), nimi(aHlo.nimi)
@@ -29,6 +31,7 @@ Henkilo::~Henkilo()
 {
 	//vapautetaan olion varaama dynaaminen muisti ja muut resurssit
 	cout << "henkilon " << nimi << " purkaja" << endl;
+	osoite->~Osoite;
 }
 
 string Henkilo::getNimi() const
@@ -55,6 +58,8 @@ void Henkilo::setIka(const int& aIka)
 
 void Henkilo::tulostaTiedot() const
 {
+
+	cout << "henkilo osoitteessa" << endl;
 	cout << "NIMI:" << nimi << endl;
 	cout << "Ika:" << ika << endl;
 }

@@ -22,6 +22,15 @@ Osoite::~Osoite()
 {
 }
 
+void Osoite::setKatuOsoite(const string& aKatu)
+{
+	katuOsoite = aKatu;
+}
+
+void Osoite::setKunta(const string& aKunta)
+{
+	kunta = aKunta;
+}
 
 void Osoite::tulostaTiedot()
 {

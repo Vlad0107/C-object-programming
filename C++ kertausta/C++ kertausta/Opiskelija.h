@@ -13,3 +13,14 @@ private:
 	int opintoPisteet;
 };
 
+/* Opiskelija(const string& a nimi, int aaika, int aopintopisteet)  :  Henkilo (aNimi, aAika), opintopisteet(aOpintopistee) {
+
+}
+
+void Tulostatiedot() const{
+
+Henkilo::Tulostatiedot
+
+}
+*/
+

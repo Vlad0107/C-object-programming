@@ -1,0 +1,4 @@
+Mit‰ tarkoittaa memory leak? Vuodossa alustetaan tietoa, joka unohdetaan poistaa tavalla tai toisella. Ohjelmoija voi unohtaa poistaa datan tai voidaan
+menett‰‰ osoitin poistettavaan dataa. Jossain vaiheessa datan m‰‰r‰ kasvaa liian suureksi ja aiheuttaa overflown.
+
+Mit‰ tarkoittaa dangling pointer? Roikkuva osoitin on tapaus, jossa olio osoittaa toiseen olioon, mutta osoittava olio joko poistetaan tai hukataan. T‰llˆin osoitettava olio on olemassa, mutta siihen ei p‰‰st‰ k‰siksi.

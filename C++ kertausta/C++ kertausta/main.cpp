@@ -25,28 +25,34 @@ void foo(const Henkilo& x) {
 	x.tulostaTiedot();
 }
 
+void myFunc() {
+	Henkilo* op1 = new Opiskelija("olli", 50, 60);
+	op1->tulostaTiedot();
+
+	delete op1; // poista t‰m‰ niin tulee heap overflow
+}
+
+Henkilo kalle("kalle", 0);
+
 int main() {
 	
-	Henkilo kalle("Kalle", 30); // osoite j‰‰ tyhj‰ksi
-	Henkilo maija("Maija", 24, "H‰meenpuisto 20", "Tampere"); // Nimi, ik‰ ja osoite
-	Opiskelija pekka("Pekka", 20, 45); // viimeinen parametri opintopisteet
-	Henkilo* marja = new Henkilo("Marja", 18);
-	Henkilo* henkilot[10] = {	new Henkilo("Aapo",50),
-								new Henkilo("Riku",16,"Osinko","Oulu"),
-								new Henkilo("Riku",16,"Osinko","Oulu"),
-								new Henkilo("Maijukka",54,"Lausunto","Rovaniemi"),
-								new Henkilo("Konsta",95),
-								new Henkilo("Heikki",51),
-								new Henkilo("Lotta",97,"Aleksanterin","Helsinki"),
-								new Henkilo("Toni",65), 
-								new Opiskelija("pekka",50,60),
-								new Opiskelija("juhani",50,60)
-		};
+	kalle.tulostaTiedot();
 
-	for (int count = 0; count < 10; count++) {
-		henkilot[count]->tulostaTiedot();
-	}
-	delete henkilot;
+	//stack
+	Henkilo pekka("pekka", 20);
+	pekka.tulostaTiedot();
+
+	//heap
+	Henkilo* op1 = new Opiskelija("olli", 50, 60);
+	op1->tulostaTiedot();
+
+	Henkilo* x = op1;
+
+	delete op1;
+	op1 = nullptr;
+
+	x->tulostaTiedot();
+
 	system("pause");
 	return EXIT_SUCCESS;
 }

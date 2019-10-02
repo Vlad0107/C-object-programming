@@ -121,6 +121,9 @@
     <ClCompile Include="Opiskelija.cpp" />
     <ClCompile Include="Osoite.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Viikko2_kysymykset.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
